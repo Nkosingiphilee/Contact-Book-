@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{%block content %}
+
+ <form action="/add" method="POST">
+ <fieldset>
+ <legend>
+ New Contact:
+ </legend>
+
+   {{ form.hidden_tag() }}
+   {{ form.name.label }} {{ form.name() }}
+ <br />
+  {{ form.number.label }} {{ form.number() }}
+  <br />
+  {{ form.email.label }} {{ form.email() }}
+  <br />
+  {{ form.address.label }} {{ form.address() }}
+  <br />
+  <button>{{ form.submit() }}</button>
+
+ </fieldset>
+ </form>
+
+{%endblock%}
+'name': name, 'number': number, 'email': mail, 'address': address

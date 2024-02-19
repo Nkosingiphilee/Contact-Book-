@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{%block content %}
+<tr>
+    <dl>
+        <b>name:</b>
+        <td>
+        {{data[1]}}
+        </td>
+    </dl>
+    <dl>
+        <b>name:</b>
+        <td>
+        {{data[2]}}
+        </td>
+    </dl>
+
+    <dl><b>name:</b>
+        <td>
+           {{data[3]}}
+        </td>
+    </dl>
+    <dl>
+        <b>name:</b>
+        <td>
+          {{data[4]}}
+        </td></dl>
+</tr>
+<form action="{{url_for('delete',id=id)}}" METHOD="POST">
+   <input type="submit" value="Confirm">
+</form>
+
+
+{%endblock%}

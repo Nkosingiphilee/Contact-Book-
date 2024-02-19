@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{%block content %}
+
+<table width="1400" cellpadding="10" cellspacing="5" border="13">
+
+    <tr >
+        <th>
+        name
+       </th>
+       <th>
+        phone number
+       </th>
+        <th>
+        email
+       </th>
+        <th>
+        address
+       </th>
+    </tr>
+    {% for i in data%}
+    <tr>
+        <td>
+        {{i[1]}}
+        </td>
+        <td>
+        {{i[2]}}
+        </td>
+        <td>
+           {{i[3]}}
+        </td>
+        <td>
+          {{i[4]}}
+        </td>
+        <td>
+           <button> <a href="{{url_for('delete',id=i[0])}}">delete</a></button>  |<button><a href="{{url_for('update',id=i[0])}}">update</a> </button>
+        </td>
+    </tr>
+
+    {%endfor%}
+</table>
+{%endblock%}
